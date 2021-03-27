@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Личный сайт студента GeekBrains</title>
+	<link rel="stylesheet" href="style.css"> 
+	<script type="text/javascript">
+
+		var score = 0;
+
+		function checkAnswer(inputId, answers){
+			var userAnswer = document.getElementById(inputId).value;
+			userAnswer = userAnswer.toLowerCase();
+			for(var i = 0; i < answers.length; i++){
+				if(userAnswer == answers[i]){
+					score++;
+					break;
+				}
+			}
+		}
+		
+		function checkAnswers() {
+
+			checkAnswer("userAnswer1", ["Граммофон", "граммофон", "ГРАММОФОН", "громмофон"]);
+			checkAnswer("userAnswer2", ["Календарь", "календарь", "КАЛЕНДАРЬ"]);
+			checkAnswer("userAnswer3", ["Крапива", "крапива", "КРАПИВА"]);
+
+			alert("Вы отгадали " + score + " загадок");
+
+		}
+
+	</script>
+</head>
+<body>
+
+<div class="content">
+	<div class="header">
+       	<a href="index.html">Главная</a>
+        <a href="pazzle.html">Загадки</a>
+        <a href="guess.html">Угадайка</a>
+        <a href="guess2.html">Угадайка мультиплеер</a>
+        <a href="passw-generator.html">Генератор паролей</a>
+	</div>
+
+<div class="contentWrap">
+    <div class="content">
+        <div class="center">
+
+			<h1>Игра в загадки</h1>
+
+			<div class="box">
+
+				<p> Музыкант, певец, рассказчик всего труба да ящик.</p>
+				<input type= "text" id="userAnswer1">
+
+				<p>На раскрашенных страницах Много праздников хранится.</p>
+				<input type= "text" id="userAnswer2">
+
+				<p>Ах, не трогайте меня: Обожгу и без огня!</p>
+				<input type= "text" id="userAnswer3">
+
+				<br>
+				<a href="#" onClick="checkAnswers();">Ответить</a>
+
+			</div>
+
+        </div>
+    </div>
+</div>
+
+	
+
+</div>
+<div class="footer">
+	Copyright &copy; Artur / 
+	<a href="https://www.sololearn.com/profile/19199048">SoloLearn</a>
+<div>
+
+
+</body>
+</html>
