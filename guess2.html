@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Личный сайт студента GeekBrains</title>
+<title>GeekBrains student personal website</title>
 <link rel="stylesheet" href="style.css">
 <script type="text/javascript">
 
@@ -37,23 +37,23 @@
     function checkAnswers(userAnswer,id) {
         tryCount++;
             if (userAnswer == answer) {
-                write ("info1", " Игрок угадал и выиграл!" + " Загаданное число = " + answer);
+                write ("info1", " The player guessed and won!" + " Hidden number = " + answer);
                 hide ("button");
                 hide ("numberUser1");
                 hide ("numberUser2");
                 return;
             } else if (userAnswer > answer) {
-                write ("info1", "Игрок ввёл число больше загаданного");
+                write ("info1", "The player has entered a number greater than the specified one.");
                 hide ("numberUser1");
                 hide ("numberUser2");
                 return;
             } else if (userAnswer < answer) {
-                write ("info1", "Игрок ввёл число меньше загаданного");
+                write ("info1", "The player entered a number less than the specified one");
                 hide ("numberUser1");
                 hide ("numberUser2");
             }
         if (tryCount >= maxTryCount) {
-            write ("info1"," Вы превысили число попыток и проиграли. До свидания. <br>Правильный ответ: " + answer);
+            write ("info1"," You exceeded the number of attempts and lost. Goodbye. <br> Correct answer: " + answer);
             hide ("numberUser1");
             hide ("numberUser2");
         }
@@ -64,28 +64,28 @@
 <body>
 <div class="content">
 <div class="header">
-        <a href="index.html">Главная</a>
-        <a href="pazzle.html">Загадки</a>
-        <a href="guess.html">Угадайка</a>
-        <a href="guess2.html">Угадайка мультиплеер</a>
-        <a href="passw-generator.html">Генератор паролей</a>
+        <a href="index.html">Main</a>
+        <a href="pazzle.html">Puzzles</a>
+        <a href="guess.html">Guess</a>
+        <a href="guess2.html">Guess multipleer</a>
+        <a href="passw-generator.html">Password generator</a>
 </div>
 
     <div class="contentWrap">
         <div class="content">
             <div class="center">
 
-                <h1>Угадайка мультиплеер</h1>
-                <h2>Угадайте число от 0 до 15. Играют 2 игрока, по 3 попытки у каждого</h2>
+                <h1>Guess multipleer</h1>
+                <h2>Guess the number from 0 to 15. 2 players play, 3 attempts each</h2>
 
                 <div class="box">
-                    <p id="info1">Игрок №1</p>
+                    <p id="info1">Player №1</p>
                     <input type="text" id="numberUser1">
                     <br>
-                    <p id="info2">Игрок №2</p>
+                    <p id="info2">Player №2</p>
                     <input type="text" id="numberUser2">
                     <br>
-                    <a href="#" onclick="checkPlayer()" id="button">Начать</a>
+                    <a href="#" onclick="checkPlayer()" id="button">Begin</a>
                 </div>
 
             </div>
